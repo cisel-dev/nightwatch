@@ -34,10 +34,10 @@ This is the official repository of the Nighwatch Project.
 Access the web interface on http://localhost:3000/ or on the URL you defined in your deployment.
 On all the interface, you can fill the forms and the send button will call the backend rest api.
 The right part of the interface will display the return of the backend in JSON.
-<img src="sample-deployment/nwui.png" title="CISEL" alt="CISEL">
+<img src="https://github.com/cisel-dev/nightwatch/raw/master/sample-deployment/nwui.png" title="CISEL" alt="CISEL">
 
 You can directly access the backend API on http://localhost:5000 or on the URL you defined in your deployment.
-<img src="sample-deployment/nwrestapi.png" title="CISEL" alt="CISEL">
+<img src="https://github.com/cisel-dev/nightwatch/raw/master/sample-deployment/nwrestapi.png" title="CISEL" alt="CISEL">
 
 ---
 ### Tools of the API
@@ -99,8 +99,6 @@ Tools for Secret discovers
 - Gitleaks : https://github.com/zricethezav/gitleaks
 - detect-secrets : https://github.com/Yelp/detect-secrets
 ---
-
-
 
 
 ## Support
