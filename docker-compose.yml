@@ -1,0 +1,19 @@
+version: "3.8"
+services:
+  nightwatch-ui:
+    build: nightwatch-ui
+    image: "cisel/nightwatch-ui:0.1"
+    #extra_hosts:
+    #  - "host.docker.internal:host-gateway"
+    ports:
+      - "3000:3000"
+    environment:
+      - "REACT_APP_ACCESS_URL=${URL}"
+  nightwatch-back:
+    build: .
+    image: "cisel/nightwatch:0.1"
+    #extra_hosts:
+    #  - "host.docker.internal:host-gateway"
+    ports:
+      - "5000:5000"
+
