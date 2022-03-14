@@ -2,7 +2,6 @@ import logo from './logo.svg';
 import './App.css';
 import Home from './component/Home';
 import { BrowserRouter, Routes, Route } from "react-router-dom"
-import About from './component/About';
 import Kubetools from './component/Kubetools';
 import Gittools from './component/Gittools';
 import Containertools from './component/Containertools';

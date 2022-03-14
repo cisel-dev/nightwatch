@@ -17,7 +17,8 @@ from flask import url_for
 
 @property
 def specs_url(self):
-    return url_for(self.endpoint('specs'), _external=True, _scheme='https')
+    scheme = 'http' if 'localhost' in self.base_url else 'https'
+    return url_for(self.endpoint('specs'), _external=True, _scheme=scheme)
 Api.specs_url = specs_url
 
 
