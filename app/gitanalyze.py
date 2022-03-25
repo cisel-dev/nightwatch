@@ -34,7 +34,7 @@ class KubeLint(Resource):
             urlend = urlend.replace("www.","")
             urlwithpwd = "https://"+username+":"+password+"@"+urlend
             subprocess.run("git clone "+urlwithpwd, shell=True)
-        result  = subprocess.run("export PATH=\"/home/linuxbrew/.linuxbrew/bin:$PATH\"; kube-linter lint --format=json "+folder+";", stdout=subprocess.PIPE, shell=True)
+        result  = subprocess.run("/home/linuxbrew/.linuxbrew/bin/kube-linter lint --format=json "+folder+";", stdout=subprocess.PIPE, shell=True)
         output = result.stdout.decode("utf-8")
         jsonoutput = json.loads(output)
         return jsonoutput
@@ -109,5 +109,7 @@ class GitLeaks(Resource):
             subprocess.run("git clone "+urlwithpwd, shell=True)
         result  = subprocess.run("gitleaks detect -v -s "+folder+" -f json -c /gitleaks/config/gitleaks.toml;", stdout=subprocess.PIPE, shell=True)
         output = result.stdout.decode("utf-8")
+        if not output :
+            return "no leaks found"
         #jsonoutput = json.loads(output)
         return output
