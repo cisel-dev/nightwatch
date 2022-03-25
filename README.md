@@ -31,7 +31,7 @@ docker-compose up
 ---
 ### Build and push the docker image
 ```
-cd $HOME && git clone https://gitlab.cisel4you.ch/devops/nightwatch.git && cd nightwatch/
+cd $HOME && git clone https://github.com/cisel-dev/nightwatch.git && cd nightwatch/
 docker build --rm=true --force-rm=true -t cisel/nightwatch:X.Y .
 docker image push cisel/nightwatch:X.Y
 cd nightwatch-ui/
