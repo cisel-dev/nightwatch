@@ -13,7 +13,7 @@ This is the official repository of the Nighwatch Project.
 ```
 mkdir -p nightwatch
 cd nightwatch
-wget https://gitlab.cisel4you.ch/devops/nightwatch/-/raw/91db2238e9a08c6c3cd4c4db18b58ca8215488d3/docker-compose.yml
+https://raw.githubusercontent.com/cisel-dev/nightwatch/master/docker-compose.yml
 export URL=http://localhost:5000
 docker-compose up
 ```
