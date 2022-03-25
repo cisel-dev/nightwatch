@@ -11,9 +11,7 @@ This is the official repository of the Nighwatch Project.
 ---
 ### Quick Local Installation guide
 ```
-mkdir -p nightwatch
-cd nightwatch
-wget https://raw.githubusercontent.com/cisel-dev/nightwatch/master/docker-compose.yml
+git clone https://github.com/cisel-dev/nightwatch.git && cd nightwatch
 export URL=http://localhost:5000
 docker-compose up
 ```
