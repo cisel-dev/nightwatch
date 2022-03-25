@@ -7,9 +7,9 @@ This is the official repository of the Nighwatch Project.
 ---
 ### Quick Local Installation guide
 - Requirement : Docker 
-- wget https://gitlab.cisel4you.ch/devops/nightwatch/-/raw/91db2238e9a08c6c3cd4c4db18b58ca8215488d3/docker-compose.yml
-- export URL=http://localhost:5000
-- docker-compose up
+- ```wget https://gitlab.cisel4you.ch/devops/nightwatch/-/raw/91db2238e9a08c6c3cd4c4db18b58ca8215488d3/docker-compose.yml```
+- ```export URL=http://localhost:5000```
+- ```docker-compose up```
 - Access the UI : http://localhost:3000/
 - Access the API : http://localhost:5000/
 
@@ -23,12 +23,14 @@ This is the official repository of the Nighwatch Project.
 
 ---
 ### Build and push the docker image
-- cd $HOME && git clone https://gitlab.cisel4you.ch/devops/nightwatch.git && cd nightwatch/
-- docker build --rm=true --force-rm=true -t cisel/nightwatch:X.Y .
-- docker image push cisel/nightwatch:X.Y
-- cd nightwatch-ui/
-- docker build --rm=true --force-rm=true -t cisel/nightwatch-ui:X.Y .
-- docker image push cisel/nightwatch-ui:X.Y
+```
+cd $HOME && git clone https://gitlab.cisel4you.ch/devops/nightwatch.git && cd nightwatch/
+docker build --rm=true --force-rm=true -t cisel/nightwatch:X.Y .
+docker image push cisel/nightwatch:X.Y
+cd nightwatch-ui/
+docker build --rm=true --force-rm=true -t cisel/nightwatch-ui:X.Y .
+docker image push cisel/nightwatch-ui:X.Y
+```
 
 ---
 ### User Guide
