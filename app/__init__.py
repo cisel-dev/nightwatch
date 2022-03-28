@@ -5,7 +5,7 @@ import json
 from flask import Flask, request
 import werkzeug
 werkzeug.cached_property = werkzeug.utils.cached_property
-#FOR LOCAL TEST, NEED TO INSTALL THIS 2 NEXT LINES
+#FOR LOCAL TEST, NEED TO INSTALL THESE 2 NEXT LINES
 #import flask.scaffold
 #flask.helpers._endpoint_from_view_func = flask.scaffold._endpoint_from_view_func
 ####################################################
