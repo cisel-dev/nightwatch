@@ -32,11 +32,11 @@ docker-compose up
 ### Build and push the docker image
 ```
 cd $HOME && git clone https://github.com/cisel-dev/nightwatch.git && cd nightwatch/
-docker build --rm=true --force-rm=true -t cisel/nightwatch:X.Y .
-docker image push cisel/nightwatch:X.Y
+docker build --rm=true --force-rm=true -t XYZ/nightwatch:X.Y .
+docker image push XYZ/nightwatch:X.Y
 cd nightwatch-ui/
-docker build --rm=true --force-rm=true -t cisel/nightwatch-ui:X.Y .
-docker image push cisel/nightwatch-ui:X.Y
+docker build --rm=true --force-rm=true -t XYZ/nightwatch-ui:X.Y .
+docker image push XYZ/nightwatch-ui:X.Y
 ```
 
 ---
