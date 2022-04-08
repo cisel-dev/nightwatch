@@ -23,6 +23,7 @@ docker-compose up
 
 ---
 ### Kubernetes Installation guide
+If you prefer to run the application on a Kubernetes cluster
 - Requirement : Kubernetes cluster & Ingress controller (or loadbalancer like metallb)
 - Find the sample of deployment in this repo (sample-deployment/deployment.yaml)
 - Create a public DNS and edit the ingress rule in your sample-deployment/deployment.yaml
