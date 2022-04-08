@@ -30,7 +30,7 @@ docker-compose up
 If you prefer to run the application on a Kubernetes cluster
 - Requirement : Kubernetes cluster & Ingress controller (or loadbalancer like metallb)
 - Find the sample of deployment in this repo (sample-deployment/deployment.yaml)
-- Create a public DNS, edit the ingress rule and the REACT_APP_ACCESS_URL in your sample-deployment/deployment.yaml
+- Create a entry in your DNS, edit the ingress rule and the REACT_APP_ACCESS_URL in your sample-deployment/deployment.yaml
 - kubectl apply -f sample-deployment/deployment.yaml
 
 ---
