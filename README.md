@@ -127,5 +127,5 @@ Reach us at one of the following places!
 ---
 
 ## License
-- Copyright 2020 © <a href="https://www.cisel.ch" target="_blank">CISEL</a>.
+- Copyright 2022 © <a href="https://www.cisel.ch" target="_blank">CISEL</a>.
 
