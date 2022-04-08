@@ -5,6 +5,10 @@
 This is the official repository of the Nighwatch Project.
 
 ---
+### Disclaimer
+Do not publish this application as is on the internet. It does not follow good security practices. It is dedicated to an internal use.
+
+---
 ### Requirements
 - Docker : https://docs.docker.com/get-docker/
 
