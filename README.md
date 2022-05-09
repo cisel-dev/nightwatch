@@ -1,8 +1,7 @@
 # NightWatch
 <a href="https://www.cisel.ch/"><img width="500" src="https://www.cisel.ch/wp-content/uploads/2021/07/7.png" title="CISEL" alt="CISEL"></a>
 
-
-This is the official repository of the Nighwatch Project.
+This is the Nighwatch Project.
 
 NightWatch gathers different opensource tools around the security of native cloud ecosystems.
 It will help you to easily identify security issues in 
