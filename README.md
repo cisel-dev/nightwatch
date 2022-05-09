@@ -13,7 +13,7 @@ It will help you to easily identify security issues in
 
 ---
 ### Disclaimer
-Do not publish this application as is on the internet. It does not follow good security practices. It is dedicated to an internal use.
+Do not publish this application on the internet. It does not follow good security practices. It is dedicated to an internal use.
 
 ---
 ### Requirements
@@ -29,7 +29,6 @@ docker-compose up
 ### Access the application
 - Access the UI : http://localhost:3000/
 - Access the API : http://localhost:5000/
-
 
 ---
 ### Kubernetes Installation guide (WORK IN PROGRESS)
@@ -62,28 +61,41 @@ You can directly access the backend API on http://localhost:5000 or on the URL y
 
 
 
-#### Kubetools
-##### kubehunt usage
-Enter an IP adress or FQDN of a Kubernetes cluster
+#### kubehunt usage
+- Enter an IP adress or FQDN of a Kubernetes cluster
 
-##### kubesec usage
-Enter a repository URL : https://github.com/kubernetes/examples.git
-Enter a YAML file to analyse in the repository : examples/guestbook/frontend-deployment.yaml
-Git username, Git password
+#### kubesec usage
+- Enter a Git repository URL : https://github.com/kubernetes/examples.git
+- Enter a YAML file to analyse in the repository : examples/guestbook/frontend-deployment.yaml
+- Git username, Git password
 
-##### kubebench usage
-Enter .kubeconfig file in 64bits format, Exemple :  cat ~/.kube/config | base64 | pbcopy 
+#### kubebench usage
+- Enter .kubeconfig file in 64bits format, Exemple :  cat ~/.kube/config | base64 | pbcopy 
 
+#### kubelint usage
+- Enter a Git repository URL : https://github.com/kubernetes/examples.git
+- Enter the path of the folder to scan : examples/guestbook/
+- Git username, Git password
 
+#### terrascan usage
+- Enter a Git repository URL : https://github.com/kubernetes/examples.git
+- Enter the path of the folder to scan : examples/guestbook/
+- Git username, Git password
 
+#### gitleaks usage
+- Enter a Git repository URL : https://github.com/kubernetes/examples.git
+- Enter the path of the folder to scan : examples/guestbook/
+- Git username, Git password
 
-
-
-
+#### trivy usage
+- Enter the dockr image name : alpine:latest, or alpine:3.15.2, or cisel/nightwatch:0.1
+- Registry username, Registry password
 
 
 ---
-### Tools of the API
+### Tools usage examples without of the UI
+Below you can find some examples on how to use some of the security tools hosted in NightWatch using the CLI.
+
 Kube-hunter Usage
 - docker exec -it nightwatch kube-hunter --remote w.x.y.z  --enable-cve-hunting 
 - docker exec -it nightwatch kube-hunter --remote w.x.y.z  --enable-cve-hunting --report json
@@ -99,12 +111,10 @@ Kubesec usage
 - docker exec nightwatch bash -c 'git clone https://github.com/kubernetes/examples.git; cd examples/guestbook/; find . -type f -name "*.yaml" -exec kubesec scan {} \;'
 
 Kube-linter Usage
-- kube-linter checks list
-- kube-linter checks list --format json
+
 - docker exec nightwatch bash -c 'rm -rf examples; git clone https://github.com/kubernetes/examples.git; export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"; kube-linter lint -v --add-all-built-in examples/guestbook/;'
 - docker exec nightwatch bash -c 'rm -rf examples; git clone https://github.com/kubernetes/examples.git; export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"; kube-linter lint examples/guestbook/;' 
 - docker exec nightwatch bash -c 'rm -rf examples; git clone https://github.com/kubernetes/examples.git; export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"; kube-linter lint --format=json examples/guestbook/;'
-- docker exec nightwatch bash -c 'rm -rf examples; git clone https://github.com/kubernetes/examples.git; export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"; kube-linter lint --format=sarif examples/guestbook/;'
 - docker exec nightwatch bash -c 'rm -rf examples; git clone https://github.com/kubernetes/examples.git; export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"; kube-linter lint -v examples/guestbook/;'
 - docker exec nightwatch bash -c 'rm -rf examples; git clone https://github.com/helm/examples.git;  export PATH="/home/linuxbrew/.linuxbrew/bin:$PATH"; kube-linter lint  -v --add-all-built-in examples/charts/hello-world/;'
 
@@ -112,7 +122,6 @@ Terrascan usage
 - docker exec nightwatch bash -c 'rm -rf examples; git clone https://github.com/kubernetes/examples.git; terrascan init; terrascan scan --iac-dir examples/guestbook/ -i k8s;'
 - docker exec nightwatch bash -c 'rm -rf examples; git clone https://github.com/kubernetes/examples.git; terrascan init; terrascan scan --iac-dir examples/guestbook/ --show-passed --output json -i k8s;'
 - docker exec nightwatch bash -c 'rm -rf examples; git clone https://github.com/helm/examples.git; terrascan init; terrascan scan --iac-dir examples/charts/hello-world/ -i helm;'
-- docker exec nightwatch bash -c 'rm -rf examples; git clone https://github.com/helm/examples.git; terrascan init; terrascan scan --iac-dir examples/charts/hello-world/ --show-passed -i helm;'
 - terrascan scan -t k8s -r git -u https://github.com/kubernetes/examples.git
 
 GitLeaks usage
@@ -128,19 +137,6 @@ Whispers usage
 
 Detect-secrets usage
 - docker exec nightwatch bash -c 'rm -rf gronit; git clone https://github.com/gitleakstest/gronit; cd gronit; detect-secrets scan --all-files --force-use-all-plugins;'
-
-Tools for Kubernetes
-- Kube-bench : https://github.com/aquasecurity/kube-bench 
-- Kube-hunter : https://github.com/aquasecurity/kube-hunter
-
-Tools for Code Best practice Yaml/Repo/Helm
-- Kubesec : https://kubesec.io/
-- KubeLinter : https://github.com/stackrox/kube-linter
-- Terrascan : https://github.com/accurics/terrascan 
-
-Tools for Secret discovers
-- Gitleaks : https://github.com/zricethezav/gitleaks
-- detect-secrets : https://github.com/Yelp/detect-secrets
 ---
 
 

@@ -141,11 +141,11 @@ const Gittools = () => {
                 <Form onSubmit={(e) => kubelint(e, kubeIpAddress)}>
                   <Form.Group className="mb-3" controlId="kubelintId">
                     <Form.Label>kubelint</Form.Label>
-                    <Row><Col><Form.Control required type="text" placeholder="Enter URL of a git repository" value={kubelintURL} onInput={e => setKubelintURL(e.target.value)} /></Col></Row>
-                    <Row><Col><Form.Control required type="text" placeholder="Enter the path of the folder to scan" value={kubelintFolder} onInput={e => setKubelintFolder(e.target.value)} /></Col></Row>
+                    <Row><Col><Form.Control required type="text" placeholder="Enter a Git repository URL : https://github.com/kubernetes/examples.git" value={kubelintURL} onInput={e => setKubelintURL(e.target.value)} /></Col></Row>
+                    <Row><Col><Form.Control required type="text" placeholder="Enter the path of the folder to scan : examples/guestbook/" value={kubelintFolder} onInput={e => setKubelintFolder(e.target.value)} /></Col></Row>
                     <Row>
-                      <Col><Form.Control type="text" placeholder="username" value={kubelintUsername} onInput={e => setKubelintUsername(e.target.value)} /></Col>
-                      <Col><Form.Control type="password" placeholder="password" value={kubelintPassword} onInput={e => setKubelintPassword(e.target.value)} /><br /></Col>
+                      <Col><Form.Control type="text" placeholder="Git username" value={kubelintUsername} onInput={e => setKubelintUsername(e.target.value)} /></Col>
+                      <Col><Form.Control type="password" placeholder="Git password" value={kubelintPassword} onInput={e => setKubelintPassword(e.target.value)} /><br /></Col>
                     </Row>
                     <Button type="submit" value="submit">
                       Go!
@@ -155,11 +155,11 @@ const Gittools = () => {
                 <Form onSubmit={(e) => terrascan(e, kubeIpAddress)}>
                   <Form.Group className="mb-3" controlId="terrascanId">
                     <Form.Label>terrascan</Form.Label>
-                    <Row><Col><Form.Control required type="text" placeholder="Enter URL of a git repository" value={terrascanURL} onInput={e => setTerrascanURL(e.target.value)} /></Col></Row>
-                    <Row><Col><Form.Control required type="text" placeholder="Enter the path of the folder to scan" value={terrascanFolder} onInput={e => setTerrascanFolder(e.target.value)} /></Col></Row>
+                    <Row><Col><Form.Control required type="text" placeholder="Enter a Git repository URL : https://github.com/kubernetes/examples.git" value={terrascanURL} onInput={e => setTerrascanURL(e.target.value)} /></Col></Row>
+                    <Row><Col><Form.Control required type="text" placeholder="Enter the path of the folder to scan : examples/guestbook/" value={terrascanFolder} onInput={e => setTerrascanFolder(e.target.value)} /></Col></Row>
                     <Row>
-                      <Col><Form.Control type="text" placeholder="username" value={terrascanUsername} onInput={e => setTerrascanUsername(e.target.value)} /></Col>
-                      <Col><Form.Control type="password" placeholder="password" value={terrascanPassword} onInput={e => setTerrascanPassword(e.target.value)} /><br /></Col>
+                      <Col><Form.Control type="text" placeholder="Git username" value={terrascanUsername} onInput={e => setTerrascanUsername(e.target.value)} /></Col>
+                      <Col><Form.Control type="password" placeholder="Git password" value={terrascanPassword} onInput={e => setTerrascanPassword(e.target.value)} /><br /></Col>
                     </Row>
                     <Button type="submit" value="submit">
                       Go!
@@ -169,11 +169,11 @@ const Gittools = () => {
                 <Form onSubmit={(e) => gitleaks(e, kubeIpAddress)}>
                   <Form.Group className="mb-3" controlId="gitleaksId">
                     <Form.Label>gitleaks</Form.Label>
-                    <Row><Col><Form.Control required type="text" placeholder="Enter URL of a git repository" value={gitleaksURL} onInput={e => setGitleaksURL(e.target.value)} /></Col></Row>
-                    <Row><Col><Form.Control required type="text" placeholder="Enter the path of the folder to scan" value={gitleaksFolder} onInput={e => setGitleaksFolder(e.target.value)} /></Col></Row>
+                    <Row><Col><Form.Control required type="text" placeholder="Enter a Git repository URL : https://github.com/kubernetes/examples.git" value={gitleaksURL} onInput={e => setGitleaksURL(e.target.value)} /></Col></Row>
+                    <Row><Col><Form.Control required type="text" placeholder="Enter the path of the folder to scan : examples/guestbook/" value={gitleaksFolder} onInput={e => setGitleaksFolder(e.target.value)} /></Col></Row>
                     <Row>
-                      <Col><Form.Control type="text" placeholder="username" value={gitleaksUsername} onInput={e => setGitleaksUsername(e.target.value)} /></Col>
-                      <Col><Form.Control type="password" placeholder="password" value={gitleaksPassword} onInput={e => setGitleaksPassword(e.target.value)} /><br /></Col>
+                      <Col><Form.Control type="text" placeholder="Git username" value={gitleaksUsername} onInput={e => setGitleaksUsername(e.target.value)} /></Col>
+                      <Col><Form.Control type="password" placeholder="Git password" value={gitleaksPassword} onInput={e => setGitleaksPassword(e.target.value)} /><br /></Col>
                     </Row>
                     <Button type="submit" value="submit">
                       Go!
