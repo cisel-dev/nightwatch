@@ -4,6 +4,13 @@
 
 This is the official repository of the Nighwatch Project.
 
+NightWatch gathers different opensource tools around the security of native cloud ecosystems.
+It will help you to easily identify security issues in 
+- Kubernetes Cluster and deployment
+- Container images
+- Codes and repositories 
+
+
 ---
 ### Disclaimer
 Do not publish this application as is on the internet. It does not follow good security practices. It is dedicated to an internal use.
@@ -19,14 +26,13 @@ cd $HOME && git clone https://github.com/cisel-dev/nightwatch.git && cd nightwat
 export URL=http://localhost:5000
 docker-compose up
 ```
----
 ### Access the application
 - Access the UI : http://localhost:3000/
 - Access the API : http://localhost:5000/
 
 
 ---
-### Kubernetes Installation guide
+### Kubernetes Installation guide (WORK IN PROGRESS)
 If you prefer to run the application on a Kubernetes cluster
 - Requirement : Kubernetes cluster & Ingress controller (or loadbalancer like metallb)
 - Find the sample of deployment in this repo (sample-deployment/deployment.yaml)
@@ -53,6 +59,28 @@ The right part of the interface will display the return of the backend in JSON.
 
 You can directly access the backend API on http://localhost:5000 or on the URL you defined in your deployment.
 <img src="https://github.com/cisel-dev/nightwatch/raw/master/sample-deployment/nwrestapi.png" title="CISEL" alt="CISEL">
+
+
+
+#### Kubetools
+##### kubehunt usage
+Enter an IP adress or FQDN of a Kubernetes cluster
+
+##### kubesec usage
+Enter a repository URL : https://github.com/kubernetes/examples.git
+Enter a YAML file to analyse in the repository : examples/guestbook/frontend-deployment.yaml
+Git username, Git password
+
+##### kubebench usage
+Enter .kubeconfig file in 64bits format, Exemple :  cat ~/.kube/config | base64 | pbcopy 
+
+
+
+
+
+
+
+
 
 ---
 ### Tools of the API
