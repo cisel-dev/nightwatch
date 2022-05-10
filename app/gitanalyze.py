@@ -23,7 +23,9 @@ class KubeLint(Resource):
         folder = content['folder']
         try:
             username = content['username']  
+            username = urllib.parse.quote(username)
             password = content['password'] 
+            password = urllib.parse.quote(password)
         except KeyError:
             print('data does not contain username and password')
         if username is None:
@@ -59,7 +61,9 @@ class Terrascan(Resource):
         folder = content['folder']
         try:
             username = content['username']  
+            username = urllib.parse.quote(username)
             password = content['password'] 
+            password = urllib.parse.quote(password)
         except KeyError:
             print('data does not contain username and password')
         
