@@ -1,4 +1,5 @@
 from __main__ import api, Resource, request, subprocess, json, fields
+import urllib.parse
 
 ns_cisel_git = api.namespace('cisel-nightwatch-git', description='Operations related to nightwatch git')
 
@@ -95,7 +96,9 @@ class GitLeaks(Resource):
         folder = content['folder']
         try:
             username = content['username']  
+            username = urllib.parse.quote(username)
             password = content['password'] 
+            password = urllib.parse.quote(password)
         except KeyError:
             print('data does not contain username and password')
         if username is None:
