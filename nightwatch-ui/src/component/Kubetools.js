@@ -169,8 +169,8 @@ const Kubetools = () => {
                 </Card.Text>
                 <Form onSubmit={(e) => kubehunt(e, kubeIpAddress)}>
                   <Form.Group className="mb-3" controlId="kubhuntId">
-                    <Row><Col><Form.Label>kubehunt</Form.Label></Col></Row>
-                    <Row><Col><Form.Control required type="text" placeholder="Enter an IP adress or FQDN of a Kubernetes cluster : https://10.10.0.10 or https://cluster.local" value={kubeIpAddress} onInput={e => setKubeIpAddress(e.target.value)} /></Col></Row>
+                    <Row><Col><Form.Label>Kube-hunter [https://github.com/aquasecurity/kube-hunter]</Form.Label></Col></Row>
+                    <Row><Col><Form.Control required type="text" placeholder="Enter an IP adress or FQDN of a Kubernetes cluster : 10.10.0.10 or cluster.local" value={kubeIpAddress} onInput={e => setKubeIpAddress(e.target.value)} /></Col></Row>
                     <br />
                     <Button type="submit" value="submit">
                       Go!
@@ -179,8 +179,8 @@ const Kubetools = () => {
                 </Form>
                 <Form onSubmit={(e) => kubebench(e)}>
                   <Form.Group className="mb-3" controlId="kubebenchId">
-                    <Row><Col><Form.Label>kubebench</Form.Label></Col></Row>
-                    <Row><Col><Form.Control required type="text" placeholder="Paste your .kubeconfig file content in base64 format, Exemple :  cat ~/.kube/config | base64 | pbcopy" value={kubeconfig} onInput={e => setKubeConfig(e.target.value)} /></Col></Row>
+                    <Row><Col><Form.Label>Kube-bench [https://github.com/aquasecurity/kube-bench]</Form.Label></Col></Row>
+                    <Row><Col><Form.Control required type="text" placeholder="Paste your .kubeconfig file content in base64 format, example :  cat ~/.kube/config | base64 -w0" value={kubeconfig} onInput={e => setKubeConfig(e.target.value)} /></Col></Row>
                     <br />
                     <Button type="submit" value="submit">
                       Go!
@@ -189,7 +189,7 @@ const Kubetools = () => {
                 </Form>
                 <Form onSubmit={(e) => kubesec(e, kubeIpAddress)}>
                   <Form.Group className="mb-3" controlId="kubesecId">
-                    <Row><Col><Form.Label>kubesec</Form.Label></Col></Row>
+                    <Row><Col><Form.Label>Kubesec [https://github.com/controlplaneio/kubesec]</Form.Label></Col></Row>
                     <Row><Col><Form.Control required type="text" placeholder="Enter a Git repository URL : https://github.com/kubernetes/examples.git" value={kubesecURL} onInput={e => setKubesecURL(e.target.value)} /></Col></Row>
                     <Row><Col><Form.Control required type="text" placeholder="Enter a YAML file to analyse in the repository : examples/guestbook/frontend-deployment.yaml" value={kubesecFolder} onInput={e => setKubesecFolder(e.target.value)} /></Col></Row>
                     <Row>

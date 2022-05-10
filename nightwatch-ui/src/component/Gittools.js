@@ -140,7 +140,7 @@ const Gittools = () => {
                 </Card.Text>
                 <Form onSubmit={(e) => kubelint(e, kubeIpAddress)}>
                   <Form.Group className="mb-3" controlId="kubelintId">
-                    <Form.Label>kubelint</Form.Label>
+                    <Form.Label>KubeLint [https://github.com/stackrox/kube-linter]</Form.Label>
                     <Row><Col><Form.Control required type="text" placeholder="Enter a Git repository URL : https://github.com/kubernetes/examples.git" value={kubelintURL} onInput={e => setKubelintURL(e.target.value)} /></Col></Row>
                     <Row><Col><Form.Control required type="text" placeholder="Enter the path of the folder to scan : examples/guestbook/" value={kubelintFolder} onInput={e => setKubelintFolder(e.target.value)} /></Col></Row>
                     <Row>
@@ -154,7 +154,7 @@ const Gittools = () => {
                 </Form>
                 <Form onSubmit={(e) => terrascan(e, kubeIpAddress)}>
                   <Form.Group className="mb-3" controlId="terrascanId">
-                    <Form.Label>terrascan</Form.Label>
+                    <Form.Label>Terrascan [https://github.com/accurics/terrascan]</Form.Label>
                     <Row><Col><Form.Control required type="text" placeholder="Enter a Git repository URL : https://github.com/kubernetes/examples.git" value={terrascanURL} onInput={e => setTerrascanURL(e.target.value)} /></Col></Row>
                     <Row><Col><Form.Control required type="text" placeholder="Enter the path of the folder to scan : examples/guestbook/" value={terrascanFolder} onInput={e => setTerrascanFolder(e.target.value)} /></Col></Row>
                     <Row>
@@ -168,7 +168,7 @@ const Gittools = () => {
                 </Form>
                 <Form onSubmit={(e) => gitleaks(e, kubeIpAddress)}>
                   <Form.Group className="mb-3" controlId="gitleaksId">
-                    <Form.Label>gitleaks</Form.Label>
+                    <Form.Label>Gitleaks [https://github.com/zricethezav/gitleaks]</Form.Label>
                     <Row><Col><Form.Control required type="text" placeholder="Enter a Git repository URL : https://github.com/kubernetes/examples.git" value={gitleaksURL} onInput={e => setGitleaksURL(e.target.value)} /></Col></Row>
                     <Row><Col><Form.Control required type="text" placeholder="Enter the path of the folder to scan : examples/guestbook/" value={gitleaksFolder} onInput={e => setGitleaksFolder(e.target.value)} /></Col></Row>
                     <Row>
