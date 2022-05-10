@@ -85,8 +85,8 @@ const Containertools = () => {
                     <Form.Label>trivy</Form.Label>
                     <Row><Col><Form.Control required type="text" placeholder="Enter the docker image value like alpine:latest or alpine:3.15.2" value={trivyImage} onInput={e => setTrivyImage(e.target.value)} /></Col></Row>
                     <Row>
-                      <Col><Form.Control type="text" placeholder="username" value={trivyUsername} onInput={e => setTrivyUsername(e.target.value)} /></Col>
-                      <Col><Form.Control type="password" placeholder="password" value={trivyPassword} onInput={e => setTrivyPassword(e.target.value)} /><br /></Col>
+                      <Col><Form.Control type="text" placeholder="Docker username if needed" value={trivyUsername} onInput={e => setTrivyUsername(e.target.value)} /></Col>
+                      <Col><Form.Control type="password" placeholder="Docker password  if needed" value={trivyPassword} onInput={e => setTrivyPassword(e.target.value)} /><br /></Col>
                     </Row>
                     <br />
                     <Button type="submit" value="submit">
